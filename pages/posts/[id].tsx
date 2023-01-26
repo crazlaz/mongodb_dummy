@@ -58,7 +58,7 @@ export async function getStaticProps({
 
 }
 
-export async function getStaticPaths() {
+export async function getServerSideProps() {
     let posts = await fetch('http://localhost:3000/api/getPosts');
 
     let postFromServer: [Post] = await posts.json();
